@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Simple Personal portfolio</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="img-area">
+          <img src="images/photo-3.jpg" alt="This is first picture" />
+        </div>
+      </div>
+      <h1>Suad Fetudin</h1>
+      <h3>Front End Developer</h3>
+
+      <div class="main">
+        <div class="left">
+          <h2>Personal Information</h2>
+          <p><strong>Name:</strong>Suad Fetudin</p>
+          <p><strong>Age:</strong>22</p>
+          <p><strong>Email:</strong>suadfetu5@gmail.com</p>
+
+          <h2>Skills</h2>
+          <ul>
+            <li>HTML/Css</li>
+            <li>Javascript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>php</li>
+            <li>SQL</li>
+            <li>Ui/Ux</li>
+          </ul>
+          <h2>Education</h2>
+          <h3>Information Scince</h3>
+          <h3>4<sup>rd</sup>Year</h3>
+          <p>University of Jimma University 2015-2018</p>
+        </div>
+        <div class="right">
+          <h2>Intern Experience</h2>
+          <h3>Cloud Company</h3>
+          <p><strong>position:</strong>Web Developer</p>
+          <p><strong>Duration:</strong>1/11/2017-30/12/2017</p>
+          <ul>
+            <p>
+              During my internship at Cloud Technology, I was initially brought
+              on as a Frontend Developer intern. However, the role dynamically
+              evolved, providing me with a comprehensive full-stack development
+              experience. This opportunity allowed me to apply my academic
+              knowledge from Information Science to a real-world project,
+              bridging the gap between user-centric information systems and
+              practical Web development. My primary contribution was the
+              end-to-end development of "Lekelal," a website dedicated to
+              Ethiopian food recipes and homemade planting techniques.
+            </p>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Code injected by live-server -->
+    <script>
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading."
+        );
+      }
+      // ]]>
+    </script>
+  </body>
+</html>
